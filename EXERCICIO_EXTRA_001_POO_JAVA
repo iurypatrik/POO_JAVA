@@ -1,0 +1,80 @@
+// 01)Escreva um programa em Java que leia os valores da base e altura de um retângulo. Em seguida, exibir na tela o valor do perímetro e área.
+
+import java.util.*;
+import java.math.*;
+class Main {
+public static void main(String[] args) {
+Scanner entrada = new Scanner(System.in);
+
+System.out.print("\n\nQuestão 01\n");
+
+System.out.print("\nDigite o valor da base :");
+float base = entrada.nextFloat();
+
+System.out.print("\nDigite o valor da altura :");
+float altura = entrada.nextFloat();
+
+float perimetro = 2*(base+altura);
+float area = base * altura;
+
+System.out.printf("\nO valor do Perimetro é: %.2f e o valor da Area é %.2f ",perimetro,area);
+
+//02) Escreva um programa em Java que leia os valores dos catetos de um
+//triângulo retângulo e calcule o valor da hipotenusa.
+
+System.out.print("\n\nQuestão 02\n");
+
+System.out.print("\nDigite o valor do Cateto 01:");
+float cateto01 = entrada.nextFloat();
+
+System.out.print("\nDigite o valor do Cateto 02:");
+float cateto02 = entrada.nextFloat();
+
+double hipo = Math.sqrt(Math.pow(cateto01,2)+Math.pow(cateto02,2));
+
+System.out.printf("\nO valor da Hipotenusa é: %.2f",hipo);
+
+// 03) Escreva um programa que leia do usuário o seu nome e as quatro notas
+// bimestrais. O programa deve calcular a média aritméca das notas. Em
+// seguida, exibir na tela a mensagem: “Resultado final do aluno ” + nome + “.
+// Obteve nota final: ” + média.
+
+System.out.print("\n\nQuestão 03\n");
+
+System.out.print("\nDigite o nome do Aluno: ");
+String nome = entrada.nextLine();
+
+System.out.print("\nDigite a Primeira Nota: ");
+float n1 = entrada.nextFloat();
+System.out.print("\nDigite a segunda Nota: ");
+float n2 = entrada.nextFloat();
+System.out.print("\nDigite a terceira Nota: ");
+float n3 = entrada.nextFloat();
+System.out.print("\nDigite a quarta Nota: ");
+float n4 = entrada.nextFloat();
+
+float media = (n1+n2+n3+n4)/4;
+
+System.out.printf("\nO resultado final do aluno %s é: %.2f",nome,media);
+
+// 04) Escreva um programa em Java que receba do usuário os valores do lado do respectivo triângulo: Em seguida calcular o seno e cosseno de theta, o seno e cosseno de beta.
+
+System.out.print("\n\nQuestão 04\n");
+
+System.out.print("\nDigite o valor da hipotenusa :");
+float hipo02 = entrada.nextFloat();
+System.out.print("\nDigite o valor do cateto 01 :");
+float catA = entrada.nextFloat();
+System.out.print("\nDigite o valor do cateto 02 :");
+float catB = entrada.nextFloat();
+
+
+double senot = catA/hipo02;
+double cost = catB/hipo02;
+double senb = catB/hipo02;
+double cosb = catA/hipo02;
+
+System.out.printf("\nO seno de theta é: %.2f , o cosseno de theta é: %.2f, o seno de beta é: %.2f e o cosseno de beta é: %.2f",senot,cost,senb,cosb);
+
+}
+}
