@@ -1,0 +1,118 @@
+import java.util.*;
+import java.math.*;
+class Main {
+/*
+01) Escreva um programa em Java que leia três valores não numéricos para
+representar a “rua”, “bairro” e “cidade”. No final é exibido o endereço
+completo do usuário.
+Exemplo:
+ENTRADA = Floriano Peixoto
+ENTRADA = Malvinas
+ENTRADA = Campina Grande
+SAÍDA = “O usuário mora na Rua: Floriano Peixoto, bairro: Malvinas da
+cidade: Campina Grande"
+*/
+public static void main(String[] args) {
+  System.out.println("Questão01\n\n");
+  Scanner entrada = new Scanner(System.in);
+  
+  System.out.print("Digite o nome da Rua: ");
+  String rua = entrada.nextLine();
+  
+  System.out.print("Digite o nome do Bairro: ");
+  String bairro = entrada.nextLine();
+
+  System.out.print("Digite o nome da Cidade: ");
+  String cidade = entrada.nextLine();
+  
+  System.out.printf("O usuario mora na Rua: %s, Bairro: %s da Cidade: %s\n\n",rua,bairro,cidade);
+
+/*
+02) Escreva um programa em Java que leia quatro números inteiros
+representando as notas de um aluno (Notas do 1°, 2°, 3° e 4° Bimestres). A
+saída do programa deve ser a média aritméƟca das notas.
+Exemplo:
+Entrada 01 = 100 SAÍDA: 75
+Entrada 02 = 70
+Entrada 03 = 80
+Entrada 04 = 50
+*/
+
+  System.out.println("Questão02\n\n"); 
+
+  System.out.print("Digite a primeira nota: ");
+  float nota1 = entrada.nextFloat();
+
+  System.out.print("Digite a segunda nota: ");
+  float nota2 = entrada.nextFloat();
+
+  System.out.print("Digite a terceira nota: ");
+  float nota3 = entrada.nextFloat();
+  
+  System.out.print("Digite a quarta nota: ");
+  float nota4 = entrada.nextFloat();
+
+  double media = (nota1+nota2+nota3+nota4)/4;
+  System.out.printf("A media é : %.2f\n\n",media);
+
+/*
+03) Escreva um programa em Java que leia dois números da entrada A e B.
+Depois o programa deve exibir na tela o valor de AxB, Raiz de A e Raiz de B:
+Exemplo:
+A = 9 SAÍDA: AxB => 36
+B = 4 Raiz de A => 3
+Raiz de B => 2
+*/
+  System.out.println("Questão03\n\n");
+  
+  System.out.print("Digite o valor de A: ");
+  float A = entrada.nextFloat();
+  
+  System.out.print("Digite o valor de B: ");
+  float B = entrada.nextFloat();
+
+  double mult = A*B;
+  double raiza = Math.sqrt(A);
+  double raizb = Math.sqrt(B);
+
+  System.out.printf("A é = %.2f e B é = %.2f, A x B é = %.2f, raiz de A é = %.2f e raiz de B é = %.2f\n\n",A,B,mult,raiza,raizb);
+
+/*
+04) Escreva um programa em Java que leia o valor da base e da altura de um
+triângulo e em seguida imprima na tela o valor de sua área. Lembrando que a
+fórmula da área é: A = (B x H)/2
+Exemplo:
+Base = 6 SAÍDA: Área => 9
+Altura = 3
+*/
+
+  System.out.println("Questão04\n\n");
+  
+  System.out.print("Digite o valor da Base: ");
+  float base = entrada.nextFloat();
+  
+  System.out.print("Digite o valor da Altura: ");
+  float altura = entrada.nextFloat();
+
+  double area = (base*altura)/2;
+  System.out.printf("A Base é = %.2f, A Altura é = %.2f e a Area é = %.2f\n\n",base, altura,area);
+
+//EXTRA - Faça um programa em JAVA para calcular o valor final de financiamento de um imóvel. Para isso você precisará calcular os juros compostos (M = C (1+i)t). Onde M: montante final, C: capital inicial, i: taxa fixa, t: período de tempo. O programa deve receber esses parâmetros e retornar o valor final pago pelo financiamento.
+
+System.out.println("QuestãoEXTRA\n\n");
+  
+  System.out.print("Digite o valor do Capital Inicial: ");
+  float c = entrada.nextFloat();
+  
+  System.out.print("Digite o valor da taxa fixa de Juros: ");
+  float i = entrada.nextFloat();
+  
+  System.out.print("Digite o periodo de Tempo: ");
+  float t = entrada.nextFloat();
+
+  double m = c*(Math.pow(1+i,t));
+  
+  System.out.printf("O valor do Motante final é: R$ %.2f",m);
+
+  }
+}
