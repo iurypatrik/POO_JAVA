@@ -1,0 +1,64 @@
+import java.util.*;
+import java.math.*;
+import java.util.Arrays.*;
+import java.util.Iterator.*;
+
+class Main {
+public static void main(String[] args) {
+Scanner entrada = new Scanner(System.in);
+
+// Questão EXTRA para vocês brincarem:
+
+// Faça um algoritmo que recebe dez números, ao final calcule e mostre:
+
+// •A soma dos números digitados
+// •A média dos números digitados
+// •O maior número digitado
+// •O menor número digitado
+// *A quantidade de números pares digitados
+// *A quantidade de números impares digitados
+// *A quantidade de números positivos digitados
+// *A quantidade de números negativos digitados
+
+List<Double> numeros = new ArrayList<Double>();
+
+double total = 0 ,  soma = 0 , media = 0 , maior = 0 , menor = 0 , par = 0 , impar = 0 , positivo = 0 , negativo = 0;
+
+for (int cont = 1;cont <= 10;cont++){
+  System.out.print("\nDigite um numero: ");
+  double num = entrada.nextDouble();
+  numeros.add(num);
+  Collections.sort(numeros);
+  if (num%2==0){
+    par+=1;
+  }
+  else{
+    impar+=1;
+  }
+  if (num>=0){
+    positivo+=1;
+  }
+  else{
+    negativo+=1;
+  }
+}
+total = numeros.size();
+soma = numeros.stream().mapToInt(Double::intValue).sum();
+media = (soma/total);
+maior = numeros.get(numeros.size()-1);
+menor = numeros.get(0);
+
+System.out.printf("\nForam digitados %.0f numeros",total);
+System.out.printf("\nA soma dos números digitados foi: %.0f",soma);
+System.out.printf("\nA media dos números digitados foi: %.2f",media);
+System.out.printf("\nO Maior numero foi: %.0f",maior);
+System.out.printf("\nO Menor numero foi: %.0f",menor);
+System.out.printf("\nA quantidade de números par digitados foi: %.0f",par);
+System.out.printf("\nA quantidade de números impar digitados foi: %.0f",impar);
+System.out.printf("\nA quantidade de números positivo digitados foi: %.0f",positivo);
+System.out.printf("\nA quantidade de números negativo digitados foi: %.0f",negativo);
+
+System.out.print("\n\n************************FIM*************************************\n");
+  
+  }
+}
