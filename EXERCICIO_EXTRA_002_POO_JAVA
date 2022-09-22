@@ -1,0 +1,76 @@
+import java.util.*;
+import java.math.*;
+
+class Main {
+	
+public static void main(String[] args){
+	Scanner entrada = new Scanner(System.in);
+
+// 01) Escreva um programa em Java que leia um valor inteiro do usuário e imprima na tela o valor do seu fatorial.
+
+System.out.print("\nDigite um numero: ");
+int num = entrada.nextInt();
+int cont = num;
+double fat = num;
+while (cont > 1) {
+cont-=1;
+fat *= cont;
+}
+
+if (num == 0){
+System.out.print("\nO fatorial de 0 é : 1");
+}
+else{
+System.out.printf("\nO fatorial de %d é : %.0f",num,fat); 
+}
+System.out.print("\n\n****************FIM*********************\n"); 
+
+// 02) Escreva um programa em Java que leia um valor inteiro do usuário e imprima na tela a tabuada de 1 a 10 do valor lido.
+
+System.out.print("\nDigite um numero: ");
+int numx = entrada.nextInt();
+int contx = 11;
+double fatx = numx;
+System.out.print("\nTABUADA DE "+numx);
+while (contx > 1) {
+contx-=1;
+fatx = numx * contx;
+System.out.printf("\n%d * %d = %.0f",numx,contx,fatx);
+}
+
+System.out.print("\n\n****************FIM*********************\n");
+  
+// 03) Escreva um programa em Java que leia 10 números inteiros e imprima na tela quantos são pares e quantos são ímpares. 
+
+int par = 0;
+int impar = 0;
+for (int i = 0; i <= 9; i++) {
+System.out.print("\nDigite um numero: ");
+int nums = entrada.nextInt();
+if (nums%2==0) {
+par+=1;
+}
+else {
+impar+=1;
+}
+}	
+
+System.out.printf("\n%d foram par e %d foram impar",par,impar);	
+
+System.out.print("\n\n****************FIM*********************\n");
+  
+// 04) Escreva um programa em Java que leia o ano de nascimento do usuário. O ano precisa ser obrigatoriamente um valor entre 1900 e 2022. Se a pessoa digitar um número diferente, mostrar a mensagem "entrada inválida" e solicitar o número novamente. Se digitar correto mostrar o número digitado.
+
+while (true) {
+System.out.print("\nDigite o ano do seu nascimento: ");
+int numr = entrada.nextInt();
+if (numr >= 1900 && numr <= 2022){
+System.out.print("\nVocê digitou: "+numr);
+break;
+} 
+}  
+
+System.out.print("\n\n****************FIM*********************\n");
+
+  }
+}
