@@ -1,0 +1,234 @@
+import java.util.*;
+import java.math.*;
+class Main {
+public static void main(String[] args) {
+Scanner entrada = new Scanner(System.in);
+
+//01 - Faça um Programa que mostre a mensagem "Alo mundo" na tela.
+
+System.out.print("\n\nQuestão 01");
+System.out.print("\n\nHello world!");
+
+//02- Faça um Programa que peça um número e então mostre a mensagem O número informado foi [número].
+System.out.print("\n\nQuestão 02");
+System.out.print("\n\nDigite um numero: ");
+int numero = entrada.nextInt();
+System.out.print("\nO numero informado foi: "+numero);
+
+//03 - Faça um Programa que peça dois números e imprima a soma.
+System.out.print("\n\nQuestão 03");
+System.out.print("\n\nDigite um numero: ");
+int numero1 = entrada.nextInt();
+System.out.print("\nDigite mais um numero: ");
+int numero2 = entrada.nextInt();
+System.out.print("\nA soma dos numeros informados é: "+(numero1+numero2));
+
+//04 - Faça um Programa que peça as 4 notas bimestrais e mostre a média.
+System.out.print("\n\nQuestão 04");
+System.out.print("\n\nDigite a primeira nota: ");
+int nota1 = entrada.nextInt();
+System.out.print("\nDigite a segunda nota: ");
+int nota2 = entrada.nextInt();
+System.out.print("\nDigite a terceira nota: ");
+int nota3 = entrada.nextInt();
+System.out.print("\nDigite a quarta nota: ");
+int nota4 = entrada.nextInt();
+System.out.print("\nA media das notas informadas é: "+(nota1+nota2+nota3+nota4)/4);
+
+//05 - Faça um Programa que converta metros para centímetros.
+System.out.print("\n\nQuestão 05");
+System.out.print("\n\nDigite um valor em metros: ");
+int m = entrada.nextInt();
+System.out.print("\nO valor da entrada em centimetros é: "+(m*100)+"cm");
+
+//06 - Faça um Programa que peça o raio de um círculo, calcule e mostre sua área.
+System.out.print("\n\nQuestão 06");
+System.out.print("\n\nDigite o valor do raio de um circulo: ");
+float r = entrada.nextFloat();
+System.out.printf("\nO valor da area desse circulo de raio %.0f é: %.2f",r,3.14*(Math.pow(r,2)));
+
+//07 - Faça um Programa que calcule a área de um quadrado, em seguida mostre o dobro desta área para o usuário.
+System.out.print("\n\nQuestão 07");
+System.out.print("\n\nDigite o valor de um dos lados de um quadrado: ");
+float l = entrada.nextFloat();
+System.out.printf("\nA area desse quadrado de lado %.0f é: %.2f, e o dobro dessa area é: %.2f",l,Math.pow(l,2),(Math.pow(l,2))*2);
+
+//08 - Faça um Programa que pergunte quanto você ganha por hora e o número de horas trabalhadas no mês. Calcule e mostre o total do seu salário no referido mês.
+
+System.out.print("\n\nQuestão 08");
+System.out.print("\n\nDigite o quanto você ganha por hora: ");
+float v = entrada.nextFloat();
+System.out.print("\n\nDigite o número de horas trabalhadas no mês: ");
+float h = entrada.nextFloat();
+System.out.printf("\nO total do seu salário no referido mês: R$%.2f",v*h);
+
+//09 - Faça um Programa que peça a temperatura em graus Fahrenheit, transforme e mostre a temperatura em graus Celsius. C = 5 * ((F-32) / 9).
+
+System.out.print("\n\nQuestão 09");
+System.out.print("\n\nDigite a temperatura em Fahrenheit: ");
+float f = entrada.nextFloat();
+System.out.printf("\nA temperatura de entrada transformada em graus Celsius é: %.2f C°",(5 * ((f-32) / 9)));
+
+//10 - Faça um Programa que peça a temperatura em graus Celsius, transforme e mostre em graus Fahrenheit.
+
+System.out.print("\n\nQuestão 10");
+System.out.print("\n\nDigite a temperatura em Celsius: ");
+float c = entrada.nextFloat();
+System.out.printf("\nA temperatura de entrada transformada em graus Fahrenheit é: %.2f F°",(c * 9/5) + 32);
+
+//11 - Faça um Programa que peça 2 números inteiros e um número real. Calcule e mostre:
+//a) o produto do dobro do primeiro com metade do segundo .
+//b) a soma do triplo do primeiro com o terceiro.
+//c) o terceiro elevado ao cubo.
+
+System.out.print("\n\nQuestão 11");
+
+System.out.print("\n\nDigite um numero inteiro: ");
+int numero01 = entrada.nextInt();
+
+System.out.print("\n\nDigite mais um numero inteiro: ");
+int numero02 = entrada.nextInt();
+
+System.out.print("\n\nDigite um numero real: ");
+float numero03 = entrada.nextFloat();
+
+System.out.println((numero01*2)*(numero02/2));
+System.out.printf("%.2f",(numero01*3)+(numero03));
+System.out.printf("\n%.2f",Math.pow(numero03,3));
+
+//12 - Tendo como dados de entrada a altura de uma pessoa, construa um algoritmo que calcule seu peso ideal, usando a seguinte fórmula: (72.7*altura) - 58
+
+System.out.print("\n\nQuestão 12");
+
+System.out.print("\n\nDigite a altura de uma pessoa: ");
+float altura = entrada.nextFloat();
+  
+System.out.printf("Seu peso ideal é: %.2f Kg",(72.7*altura) - 58);
+
+//13 - Tendo como dado de entrada a altura (h) de uma pessoa, construa um algoritmo que calcule seu peso ideal, utilizando as seguintes fórmulas:
+//a)Para homens: (72.7*h) - 58
+//b)Para mulheres: (62.1*h) - 44.7
+
+System.out.print("\n\nQuestão 13");
+
+char sexo;
+double hx, psIdeal;
+
+System.out.printf("\nInforme o sexo (M/F): ");
+sexo = entrada.next(".").charAt(0);
+
+System.out.printf("\nInforme a altura (m): ");
+hx = entrada.nextDouble();
+
+if ((sexo == 'M') || (sexo == 'm'))
+   psIdeal = (72.7 * hx) - 58;
+
+else 
+   psIdeal = (62.1 * hx) - 44.7;
+
+System.out.printf("\nO Peso Ideal eh: %6.2f kgs.\n", psIdeal);
+
+System.out.print("\n\nQuestão 13");
+
+System.out.printf("\nInforme o sexo (Masculino/Feminino): ");
+String sexos = entrada.nextLine();
+
+System.out.printf("Informe a altura (m): ");
+Float hs = entrada.nextFloat();
+
+if (sexos == "Masculino")
+   System.out.printf("\nSeu peso ideal é: %.2f Kg",((72.7 * hs) - 58));
+
+else 
+   System.out.printf("\nSeu peso ideal é: %.2f Kg",((62.1 * hs) - 44.7));
+
+
+//14 - João Papo-de-Pescador, homem de bem, comprou um microcomputador para controlar o rendimento diário de seu trabalho. Toda vez que ele traz um peso de peixes maior que o estabelecido pelo regulamento de pesca do estado de São Paulo (50 quilos) deve pagar uma multa de R$ 4,00 por quilo excedente. João precisa que você faça um programa que leia a variável peso (peso de peixes) e calcule o excesso. Gravar na variável excesso a quantidade de quilos além do limite e na variável multa o valor da multa que João deverá pagar. Imprima os dados do programa com as mensagens adequadas.
+
+System.out.print("\n\nQuestão 14");
+
+System.out.print("\n\nDigite a quantidade de peixe (em Kg): ");
+float peixe = entrada.nextFloat();
+
+if (peixe > 50)  
+  System.out.printf("Sua multa será de : R$ %.2f",(peixe-50)*4);
+else
+  System.out.println("Não pagará nenhuma multa dessa vez.");
+
+//15 - Faça um Programa que pergunte quanto você ganha por hora e o número de horas trabalhadas no mês. Calcule e mostre o total do seu salário no referido mês, sabendo-se que são descontados 11% para o Imposto de Renda, 8% para o INSS e 5% para o sindicato, faça um programa que nos dê:
+//a) salário bruto.
+//b) quanto pagou ao INSS.
+//c) quanto pagou ao sindicato.
+//d) o salário líquido.
+// calcule os descontos e o salário líquido, conforme a tabela abaixo:
+// + Salário Bruto : R$
+// - IR (11%) : R$
+// - INSS (8%) : R$
+// - Sindicato ( 5%) : R$
+// = Salário Liquido : R$
+// Obs.: Salário Bruto - Descontos = Salário Líquido.
+
+System.out.print("\n\nQuestão 15");
+
+System.out.print("\n\nDigite a valor do seu salario por hora(em R$): ");
+float salarioh = entrada.nextFloat();
+
+System.out.print("\n\nDigite o numero de horas trabalhadas por mês: ");
+float horast = entrada.nextFloat();
+
+double salariob = salarioh*horast;
+double IR = (salariob*0.11);
+double INSS = (salariob*0.08);
+double SIND = (salariob*0.05);
+
+System.out.printf("\nSalario Bruto: R$ %.2f",(salariob));
+System.out.printf("\nValor pago ao INSS: R$ %.2f",(INSS));
+System.out.printf("\nValor pago ao Sindicato: R$ %.2f",(SIND));
+System.out.printf("\nValor do Salario Liquido: R$ %.2f",((((salariob-IR)-INSS)-SIND)));
+
+  
+//16 - Faça um programa para uma loja de tintas. O programa deverá pedir o tamanho em metros quadrados da área a ser pintada. Considere que a cobertura da tinta é de 1 litro para cada 3 metros quadrados e que a tinta é vendida em latas de 18 litros, que custam R$ 80,00. Informe ao usuário a quantidades de latas de tinta a serem compradas e o preço total.
+
+System.out.print("\n\nQuestão 16");
+
+System.out.print("\n\nDigite o tamanho da area a ser pintada(em metros²): ");
+float area = entrada.nextFloat();
+
+System.out.printf("\nQuantidade de Latas: %.2f",(area/3)/18);
+System.out.printf("\nPreço Total: R$ %.2f",((area/3)/18)*80);
+
+// 17 - Faça um Programa para uma loja de tintas. O programa deverá pedir o tamanho em metros quadrados da área a ser pintada. Considere que a cobertura da tinta é de 1 litro para cada 6 metros quadrados e que a tinta é vendida em latas de 18 litros, que custam R$ 80,00 ou em galões de 3,6 litros, que custam R$ 25,00.
+//Informe ao usuário as quantidades de tinta a serem compradas e os respectivos preços em 3 situações:
+//a) comprar apenas latas de 18 litros;
+//b) comprar apenas galões de 3,6 litros;
+
+System.out.print("\n\nQuestão 16");
+
+System.out.print("\n\nDigite o tamanho da area a ser pintada(em metros²): ");
+float areaz = entrada.nextFloat();
+
+double lata18l = (areaz/6)/18;
+double lata36l = (areaz/6)/3.6;
+double preco18l = 80*lata18l;
+double preco36l = 25*lata36l;
+
+System.out.printf("\nQuantidade de Latas: %.2f 18L ou %.2f 3.6L",(lata18l),(lata36l));
+System.out.printf("\nPreço Total: R$ %.2f ou R$ %.2f",(preco18l),(preco36l));
+
+
+//18 - Faça um programa que peça o tamanho de um arquivo para download (em MB) e a velocidade de um link de Internet (em Mbps), calcule e informe o tempo aproximado de download do arquivo usando este link (em minutos).
+
+System.out.print("\n\nQuestão 16");
+
+System.out.print("\n\nDigite o tamanho do arquivo(em MB): ");
+float mb = entrada.nextFloat();
+
+System.out.print("\n\nDigite a velocidade do link de internet(em Mbps): ");
+float mbps = entrada.nextFloat();
+
+System.out.printf("\nO tempo aproximado de download do arquivo usando este link é: %.2f minutos",(mb/mbps)/60);
+
+
+
+  }
+}
