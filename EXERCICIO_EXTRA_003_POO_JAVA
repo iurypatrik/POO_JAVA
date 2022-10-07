@@ -1,0 +1,55 @@
+import java.util.*;
+class Main {
+public static void main(String[] args) {
+Scanner entrada = new Scanner(System.in);
+
+// 01) Guarde em um array o nome de pessoas e no outro os telefones. Solicite para o usuário digitar um nome para consulta. Encontrando este nome, exiba o telefone desta pessoa.   
+
+String[] nome = {"ANDRE","REBECA","IURY","LARISSA","ANA"};
+String[] telefone = {"(83)99955-6633)","(83)98855-6633)","(83)98755-6633)","(83)99155-6633)","(83)99455-6633"};
+
+
+System.out.print("digite um nome: ");
+String nomes = entrada.nextLine();
+
+for(int i = 0; i<nome.length;i++){
+  if(nomes.equalsIgnoreCase(nome[i])){
+  System.out.printf("O telefone de %s é %s",nomes,telefone[i]);
+    break;
+  }
+  if(i==(nome.length)-1){
+    System.out.println("\nO nome não esta na lista!");
+  }
+}
+System.out.print("=================FIM===================");
+
+// 02) Escreva um programa que recebe 5 nomes de pessoas e suas idades. Vocês devem armazenar essas informações em dois Arrays. No final, imprimir na tela o nome da pessoa com maior idade.
+
+String [] pessoa = new String [5];
+int [] idade = new int[5];
+
+int maior = 0,flag = 0;
+
+for(int i = 0; i<pessoa.length;i++){
+  System.out.print("\ndigite seu nome: ");
+  String pessoas = entrada.nextLine();
+
+  System.out.print("\ndigite sua idade: ");
+  int idades = entrada.nextInt();
+  String erro = entrada.nextLine();
+
+  pessoa[i]=pessoas;
+  idade[i]=idades;
+
+  if (idades > maior) {
+    maior = idade[i];
+    flag = i;
+  }
+}
+ 
+System.out.print("\nA pessoa mais velha é "+pessoa[flag]);
+
+System.out.print("=================FIM===================");
+}
+}
+
