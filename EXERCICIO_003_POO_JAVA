@@ -1,0 +1,98 @@
+import java.util.*;
+import java.math.*;
+import java.util.Arrays.*;
+import java.util.Iterator.*;
+
+class Main {
+public static void main(String[] args) {
+Scanner entrada = new Scanner(System.in);
+
+System.out.print("\n\nQuestão 01\n");
+
+// 01) Faça um programa que recebe três Strings de entrada: nome, cidade e curso. No final, o programa exibe na tela a seguinte mensagem: "Seja bem vindo X ao IFPB, o aluno é da cidade Y e foi aprovado para o curso Z". Onde X, Y e Z são respectivamente o nome, cidade e curso digitado pelo usuário. 
+
+System.out.print("\nDigite seu nome completo: ");
+String aluno = entrada.nextLine();
+
+System.out.print("\nDigite sua cidade: ");
+String cidade = entrada.nextLine();
+
+System.out.print("\nDigite seu curso: ");
+String curso = entrada.nextLine();
+
+System.out.printf("\nSeja bem vindo(a) %s ao IFPB, o(a) aluno(a) é da cidade de %s e foi aprovado para o curso de %s",aluno,cidade,curso);
+
+System.out.print("\n\n************************FIM*************************************\n");
+
+System.out.print("\n\nQuestão 02\n");
+
+// 02) Faça um programa que recebe de entrada uma String e imprime na saída: 
+// a) O número de caracteres da string digitada.
+// b) A String digitada em letras maiúsculas
+// c) A String digitada em letras minúsculas
+// d) Os cinco primeiros caracteres da string digitada 
+
+System.out.print("\nDigite seu nome completo: ");
+String nome = entrada.nextLine();
+
+System.out.println(nome.length());
+System.out.println(nome.toUpperCase());
+System.out.println(nome.toLowerCase());
+System.out.println(nome.substring(0,5));
+
+System.out.print("\n\n************************FIM*************************************\n");
+
+System.out.print("\n\nQuestão 03\n");
+
+// 03) Faça um programa que recebe de entrada uma String e verifica se o valor digitado começa com "Ana". Em caso afirmativo, imprimir na tela "Ana está presente", caso negativo "Ana não foi encontrada". 
+
+System.out.print("\nDigite seu nome completo: ");
+String pessoa = entrada.nextLine();
+
+String teste = pessoa.substring(0,3);
+
+if (teste.equalsIgnoreCase("ana")){
+  System.out.print("\nAna está presente");
+}
+else{
+  System.out.print("\nAna não foi encontrada");
+}
+
+System.out.print("\n\n************************FIM*************************************\n");
+
+System.out.print("\n\nQuestão 04\n");
+
+// 04) Faça um programa que recebe de entrada uma String referente a o nome completo do cliente. O programa deve substituir o termo "Medeiros" por "Siqueira" caso faça parte do nome digitado pelo usuário. 
+
+System.out.print("\nDigite seu nome completo: ");
+String cliente = entrada.nextLine();
+
+
+if (cliente.contains("Medeiros")){
+  System.out.println(cliente.replace("Medeiros","Siqueira"));
+}
+else{
+  System.out.print("\nSeu nome não contem Medeiros");
+}
+
+System.out.print("\n\n************************FIM*************************************\n");
+
+System.out.print("\n\nQuestão 05\n");
+
+// 05) Faça um programa que recebe de entrada duas Strings e compare se elas são iguais. O programa deve considerar maiúsculas e minúsculas. Caso sejam iguais, exiba na tela a mensagem "Strings Iguais". Caso contrário, exibir na tela a mensagem "Strings Diferentes". 
+
+System.out.print("\nDigite uma palavra: ");
+String palavra01 = entrada.nextLine();
+
+System.out.print("\nDigite mais uma palavra: ");
+String palavra02 = entrada.nextLine();
+
+if (palavra01.equals(palavra02)){
+  System.out.print("\nStrings iguais");
+}
+else{
+  System.out.print("\nStrings diferentes");
+}
+
+}
+}
