@@ -1,0 +1,82 @@
+import java.util.*;
+
+class Main {
+public static void main(String[] args) {
+Scanner entrada = new Scanner(System.in);
+
+//     Escreva um programa para solicitar informações de uma pessoa que acabou de ser contratada por uma empresa: 
+// Nome 
+// Sexo 
+// Senha Idade 
+// Profissão 
+// • Habilidades 
+// Inicialmente o programa só deverá prosseguir se o usuário digitar a senha correta que é "1234". Caso contrário, deverá pedir nova senha até que a correta seja informada. Uma vez que a senha seja digitada corretamente, o programa deve continuar. Em seguida: 
+// a) Exibir a mensagem de boas vindas seguindo a estrutura: "Seja bem vindo 
+// X a empresa FACEBOOK. Será um prazer trabalhar com um Y com sua 
+// experiência.". Onde X é o nome digitado e Y a profissão, b) Calcular o ano de aposentadoria do usuário (regra: se usuário é do sexo 
+// M a idade de aposentadoria é 65 anos, se sexo F a idade de aposentadoria é 60 anos). Exemplo: se o usuário é Me digitou 40 anos, o programa deve exibir a mensagem "Você irá se aposentar no ano de 
+// 2047". c) O campo habilidades é um texto corrido e deverá ser formatado. Assim, 
+// exibir na tela o conteúdo com letras maiúsculas, e trocar as seguintes palavras caso tenham sido digitadas "gosto de ajudar" por "SOU PROATIVO" e "gosto de trabalhar em grupo" por "SOU PARTICIPATIVO."
+
+String senha,nome,sexo,profissao,habilidade,usuario = "";
+double idade,aposentadoria = 0;
+
+System.out.print("\n\nFACEBOOK CORPORACION LTDA\n");
+
+System.out.print("\n\nVocê manifestou interesse em fazer parte desta grande empresa, os dados necessarios para seu login foram enviados para o seu e-mail, digite o e-mail cadastrado e em seguida a senha para prosseguir.\n");    
+
+System.out.print("\nDigite seu E-mail: ");
+usuario = entrada.nextLine();
+
+while (true){    
+  System.out.print("\nDigite sua senha: ");
+  senha = entrada.nextLine();
+  if (!senha.equals("1234")){
+    System.out.print("\nSenha Incorreta, tente novamente...\n");
+  }
+  else{
+    break;
+  }
+}
+
+System.out.print("\n\nPrecisamos agora dos seus dados pessoais, responda o questionario abaixo e complete seu cadastro.\n");
+  
+System.out.print("\nDigite seu nome completo: ");
+nome = entrada.nextLine();
+
+System.out.print("\nDigite seu Gênero(Masculino ou Feminino): ");
+sexo = entrada.nextLine();
+
+System.out.print("\nDigite sua profissão: ");
+profissao = entrada.nextLine();
+
+System.out.print("\nDescreva algumas habilidades que você considera importante sabermos: ");
+habilidade = entrada.nextLine();
+
+System.out.print("\nDigite sua idade: ");
+idade = entrada.nextDouble();
+
+entrada.close();
+
+System.out.printf("\n\nSeja bem vindo(a) %s a empresa FACEBOOK, será um prazer trabalhar com um(a) %s com sua experiência\n",nome,profissao);
+
+if (sexo.equalsIgnoreCase("masculino")){
+  aposentadoria = (65 - idade) + 2022;
+}
+else{
+  aposentadoria = (60 - idade) + 2022;
+}
+
+System.out.printf("\n\nVocê irá se aposentar no ano de %.0f\n",aposentadoria);
+
+if (habilidade.contains("gosto de ajudar") || habilidade.contains("gosto de trabalhar em grupo")){
+  habilidade = habilidade.replace("gosto de ajudar","SOU PROATIVO");
+  habilidade = habilidade.replace("gosto de trabalhar em grupo","SOU PARTICIPATIVO");
+}
+
+System.out.print("\nSuas Habilidades: "+habilidade.toUpperCase());
+
+System.out.print("\n\n************************FIM*************************************\n");
+
+}
+}
