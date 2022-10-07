@@ -1,0 +1,96 @@
+import java.util.*;
+
+class Main {
+public static void main(String[] args) {
+Scanner entrada = new Scanner(System.in);
+
+// 01) Crie estaticamente um array de dez números inteiros. Depois imprima na tela o terceiro valor do Array.
+
+System.out.print("\n\nQuestão 01\n");
+
+int[ ] numero001 = new int [10];
+for (int i001 = 0; i001 < numero001.length; i001++) {
+  numero001 [i001] = i001;
+} 
+
+System.out.print("\nO terceiro valor do Array é: "+numero001[2]); 
+
+System.out.println("\n\n========================FIM========================================\n");
+
+// 02)Crie estaTIcamente um array de dez números inteiros. Depois imprima na tela a soma dos valores armazenados.
+
+System.out.print("\n\nQuestão 02\n");
+
+int[ ] numero002 = new int [10];
+int soma002 = 0; 
+for (int i002 = 0; i002 < numero002.length; i002++) {
+  numero002 [i002] = i002;
+
+  soma002 += i002; 
+}
+System.out.print("\nA soma dos numero armazenados é: "+soma002);
+
+System.out.println("\n\n========================FIM========================================\n");
+
+// 03) Crie um array de cinco nomes de pessoas. Depois verifique se o nome “ANA” faz parte do Array. Em caso de confirmado exibir na tela a mensagem “SUCESSO”. E mostre a mensagem “FRACASSO” caso contrário.
+
+System.out.print("\n\nQuestão 03\n");
+
+String mensagem003 ="";  
+String[] nome003 = {"andre","rebeca","iury","larissa","ana"};
+
+for( int i003 =0; i003< nome003.length; i003++){
+  if (nome003 [i003].equals("ana")){
+    mensagem003 = "ana";
+    break;
+  }
+}
+
+if (mensagem003.equals("ana")){
+  System.out.print("\nSUCESSO! O Array contem Ana.");
+}
+else {
+  System.out.print("\nFRACASSO!O Array não contem Ana.");
+} 
+
+System.out.println("\n\n========================FIM========================================\n");
+
+// 04) Escreva um programa que lê 10 valores numéricos digitados pelo usuário e
+// armazena em um array. Depois o programa deve percorrer a estrutura e
+// imprimir na tela o MAIOR e MENOR destes valores.
+
+System.out.print("\n\nQuestão 04\n");
+
+int[ ] numero004 = new int [10];
+for (int i004 = 0; i004 < numero004.length; i004++) {
+  System.out.print("\nDigite um numero :");
+  numero004 [i004] = entrada.nextInt();
+}
+
+Arrays.sort(numero004);
+System.out.println("\nMenor :" + numero004[0]);   
+System.out.println("\nMaior :" + numero004[9]);   
+
+System.out.println("\n\n========================FIM========================================\n"); 
+
+// 05) Escreva um programa que lê 10 valores numéricos digitados pelo usuário e armazena em um array. Depois o programa deve informar quantos dos números informados são pares.
+
+System.out.print("\n\nQuestão 05\n");
+
+int par005 = 0;    
+int[ ] numero005 = new int [10];
+for (int i005 = 0; i005 < numero005.length; i005++) {
+  System.out.print("\nDigite um numero :");
+  numero005 [i005] = entrada.nextInt();
+}
+for (int i05 = 0; i05 < numero005.length; i05++) {
+  if (numero005[i05]%2==0){
+    par005 +=1;
+  }
+}
+System.out.println("\nA quantidade de numéros pares é :"+par005);
+
+System.out.println("\n\n========================FIM========================================\n");
+
+}
+}
